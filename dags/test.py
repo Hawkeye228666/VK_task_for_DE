@@ -6,7 +6,7 @@ import pandas as pd
 import os
 
 current_date = datetime.date.today()
-dag = DAG('python_example', start_date=datetime.datetime(int(str(current_date)[:4]), int(str(current_date)[5:7]), int(str(current_date)[8:])), schedule_interval='0 7 * * *')
+dag = DAG('VK_Task', start_date=datetime.datetime(int(str(current_date)[:4]), int(str(current_date)[5:7]), int(str(current_date)[8:])), schedule_interval='0 7 * * *')
 
 
 

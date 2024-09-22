@@ -1,0 +1,23 @@
+[2024-09-22T12:18:40.739+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-22T12:18:40.761+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: bash_example.echo_hello scheduled__2024-02-01T00:00:00+00:00 [queued]>
+[2024-09-22T12:18:40.772+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: bash_example.echo_hello scheduled__2024-02-01T00:00:00+00:00 [queued]>
+[2024-09-22T12:18:40.772+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-09-22T12:18:40.785+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): echo_hello> on 2024-02-01 00:00:00+00:00
+[2024-09-22T12:18:40.792+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=403) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-22T12:18:40.794+0000] {standard_task_runner.py:72} INFO - Started process 423 to run task
+[2024-09-22T12:18:40.795+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'bash_example', 'echo_hello', 'scheduled__2024-02-01T00:00:00+00:00', '--job-id', '73', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmpcyyyftj8']
+[2024-09-22T12:18:40.796+0000] {standard_task_runner.py:105} INFO - Job 73: Subtask echo_hello
+[2024-09-22T12:18:40.846+0000] {task_command.py:467} INFO - Running <TaskInstance: bash_example.echo_hello scheduled__2024-02-01T00:00:00+00:00 [running]> on host bdaaebce9b41
+[2024-09-22T12:18:40.952+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='bash_example' AIRFLOW_CTX_TASK_ID='echo_hello' AIRFLOW_CTX_EXECUTION_DATE='2024-02-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-02-01T00:00:00+00:00'
+[2024-09-22T12:18:40.954+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-22T12:18:40.973+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-22T12:18:40.974+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'echo "Hello Airflow"']
+[2024-09-22T12:18:40.983+0000] {subprocess.py:86} INFO - Output:
+[2024-09-22T12:18:40.985+0000] {subprocess.py:93} INFO - Hello Airflow
+[2024-09-22T12:18:40.986+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-09-22T12:18:41.010+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-22T12:18:41.010+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=bash_example, task_id=echo_hello, run_id=scheduled__2024-02-01T00:00:00+00:00, execution_date=20240201T000000, start_date=20240922T121840, end_date=20240922T121841
+[2024-09-22T12:18:41.051+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-22T12:18:41.065+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

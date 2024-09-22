@@ -21,7 +21,7 @@ def perform_task2():
         df = pd.concat([df, df1])
 
     action_counts = df.groupby(['email', 'action']).size().unstack(fill_value=0).reset_index()
-    action_counts.columns.name = None  # Убираем имя индекса
+    action_counts.columns.name = None 
     action_counts = action_counts.rename(columns=lambda x: f'{x.lower()}_count' if x != 'email' and x != 'date' else x)
 
     file_path = os.path.join('output', f'{current_date}.csv')
